@@ -4,14 +4,14 @@
 
 ### 実行
 
-```shell-session
-$ docker compose up --build
+```batch
+docker compose up --build
 ```
 
 ### 停止
 
 docker-compose.yml と同じディレクトリで実行。
 
-```shell-session
-$ docker compose down
+```batch
+docker compose down
 ```
