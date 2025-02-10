@@ -21,4 +21,4 @@ docker compose down
 サーバーが立ち上がると localhost(127.0.0.1)の 8000 番のポートで listen される。
 内部では、localhost(127.0.0.1)の 8000 番のポートがコンテナの 80 番ポートに接続されており、fastapi のサーバーにリクエストが送信されるようになっている。
 以下で、fastapi の仕様を確認できる。
-[あなたの fastapi ドキュメント](localhost:8000/docs)
+[あなたの fastapi ドキュメント](http://127.0.0.1:8000/docs)
