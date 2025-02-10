@@ -1,0 +1,14 @@
+services:
+  backend:
+    container_name: FastAPI
+    build:
+      # contextはDockerfile内のCOPYコマンドのルートディレクトリとして設定される
+      context: .
+      dockerfile: ./docker/Dockerfile
+    volumes:
+      - ./src:/src
+    # コンテナでは80番ポートをlistenし、localhostでは8000番ポートをlistenし
+    # それらを紐づける
+    ports:
+      - "8000:80"
+    command: uvicorn main:app --reload --host=0.0.0.0 --port=80
